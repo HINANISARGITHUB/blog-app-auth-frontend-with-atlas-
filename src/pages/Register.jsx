@@ -24,17 +24,18 @@ export default function Register() {
   };
   return (
     <div style={s.container}>
-      {" "}
+   
       <div style={s.card}>
-        {" "}
-        <h2 style={s.title}>Create account</h2>{" "}
-        <p style={s.sub}>Register to get started</p>{" "}
-        {error && <p style={s.error}>{error}</p>}{" "}
+   
+        <h2 style={s.title}>Create account</h2>
+        <p style={s.sub}>Register to get started</p>
+        {error && <p style={s.error}>{error}</p>}
         <form onSubmit={handleSubmit} style={s.form}>
-          {" "}
+        
           <div style={s.field}>
-            {" "}
-            <label style={s.label}>Name</label>{" "}
+          
+
+            <label style={s.label}>Name</label>
             <input
               type="text"
               name="name"
@@ -43,8 +44,8 @@ export default function Register() {
               onChange={handleChange}
               required
               style={s.input}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
           <div style={s.field}>
             {" "}
             <label style={s.label}>Email</label>{" "}
