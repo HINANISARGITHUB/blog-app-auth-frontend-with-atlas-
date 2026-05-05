@@ -57,7 +57,7 @@ export default function Register() {
             <input
               type="text"
               name="name"
-              placeholder="Maria Hussain"
+              placeholder="Hina Nisar"
               value={form.name}
               onChange={handleChange}
               required

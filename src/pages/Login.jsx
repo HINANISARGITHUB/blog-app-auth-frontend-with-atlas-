@@ -24,17 +24,13 @@ export default function Login() {
   };
   return (
     <div style={s.container}>
-      {" "}
       <div style={s.card}>
-        {" "}
-        <h2 style={s.title}>Welcome back</h2>{" "}
-        <p style={s.sub}>Login to your account</p>{" "}
-        {error && <p style={s.error}>{error}</p>}{" "}
+        <h2 style={s.title}>Welcome back</h2>
+        <p style={s.sub}>Login to your account</p>
+        {error && <p style={s.error}>{error}</p>}
         <form onSubmit={handleSubmit} style={s.form}>
-          {" "}
           <div style={s.field}>
-            {" "}
-            <label style={s.label}>Email</label>{" "}
+            <label style={s.label}>Email</label>
             <input
               type="email"
               name="email"
@@ -43,11 +39,10 @@ export default function Login() {
               onChange={handleChange}
               required
               style={s.input}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
           <div style={s.field}>
-            {" "}
-            <label style={s.label}>Password</label>{" "}
+            <label style={s.label}>Password</label>
             <input
               type="password"
               name="password"
@@ -56,20 +51,19 @@ export default function Login() {
               onChange={handleChange}
               required
               style={s.input}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
           <button type="submit" disabled={loading} style={s.btn}>
-            {" "}
-            {loading ? "Logging in..." : "Login"}{" "}
-          </button>{" "}
-        </form>{" "}
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
         <p style={s.footer}>
           Don't have an account?{" "}
           <Link to="/register" style={s.link}>
             Register here
           </Link>
-        </p>{" "}
-      </div>{" "}
+        </p>
+      </div>
     </div>
   );
 }

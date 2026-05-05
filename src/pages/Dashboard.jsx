@@ -9,25 +9,21 @@ export default function Dashboard() {
   };
   return (
     <div style={s.container}>
-      {" "}
       <div style={s.card}>
-        {" "}
-        <h2 style={s.title}>Welcome back!</h2>{" "}
-        <p style={s.sub}>You are successfully logged in</p>{" "}
+        <h2 style={s.title}>Welcome back!</h2>
+        <p style={s.sub}>You are successfully logged in</p>
         <div style={s.box}>
-          {" "}
-          <p style={s.label}>NAME</p>{" "}
-          <p style={s.val}>{user?.name || "User"}</p>{" "}
-        </div>{" "}
+          <p style={s.label}>NAME</p>
+          <p style={s.val}>{user?.name || "User"}</p>
+        </div>
         <div style={s.box}>
-          {" "}
-          <p style={s.label}>EMAIL</p>{" "}
-          <p style={s.val}>{user?.email || "email@example.com"}</p>{" "}
-        </div>{" "}
+          <p style={s.label}>EMAIL</p>
+          <p style={s.val}>{user?.email || "email@example.com"}</p>
+        </div>
         <button onClick={handleLogout} style={s.btn}>
           Logout
-        </button>{" "}
-      </div>{" "}
+        </button>
+      </div>
     </div>
   );
 }
