@@ -1,30 +1,31 @@
-import { createContext, useContext, useState } from 'react';
-import api from '../api/axios';
+import { createContext, useContext, useState } from "react";
+import api from "../api/axios";
 
 const AuthCtx = createContext();
+
 export const useAuth = () => useContext(AuthCtx);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  // Register function with correct /api prefix
+  // 1. Register logic with corrected path
   const register = async (data) => {
-    // Backend routes /api/auth par mapped hain, isliye prefix zaroori hai
-    const res = await api.post('/api/auth/register', data); 
+    // '/api' ka izafa kiya gaya hai taake backend route se match kare
+    const res = await api.post("/api/auth/register", data);
     setUser(res.data);
-    return res.data
+    return res.data;
   };
 
-  // Login function with correct /api prefix
+  // 2. Login logic with corrected path
   const login = async (data) => {
-    const res = await api.post('/api/auth/login', data); 
+    const res = await api.post("/api/auth/login", data);
     setUser(res.data);
-    return res.data
+    return res.data;
   };
 
-  // Logout function with correct /api prefix
+  // 3. Logout logic with corrected path
   const logout = async () => {
-    await api.post('/api/auth/logout'); 
+    await api.post("/api/auth/logout");
     setUser(null);
   };
 
